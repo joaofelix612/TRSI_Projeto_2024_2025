@@ -6,5 +6,5 @@ Ainda a pensar sobre o assunto...
 
 ### Autores
 
-João Félix
+João Félix |
 João Gouveia
