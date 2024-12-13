@@ -110,7 +110,7 @@ clear_temp_files() {
         rm -rf /private/var/folders/*/*
     else
         echo "A limpar arquivos temporários em Windows..."
-        del /q /f /s %temp%\*
+       powershell -Command "Start-Process cmd.exe -ArgumentList '/c del %TEMP%\*.* /f /s /q' -Verb RunAs"
     fi
 }
 
