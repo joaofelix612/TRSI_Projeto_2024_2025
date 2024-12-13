@@ -67,11 +67,9 @@ monitor_cpu_memory() {
 
 update_system() {
     if [[ $(uname) == "Linux" ]]; then
-        echo "Atenção! este comando só funciona em sistemas baseados em Debian (como Ubuntu)."
+        echo "Atenção! este comando só funciona em sistemas como Ubuntu."
         read -p "Pressione Enter para continuar ou CTRL+C para cancelar..."
         sudo apt update && sudo apt upgrade -y
-    elif [[ $(uname) == "Darwin" ]]; then
-        echo "Em MacOS, use 'brew update' para atualizar pacotes."
     else
         echo "Em sistemas Windows, não há comando de atualização de pacotes."
     fi

@@ -12,6 +12,22 @@ Criar uma ferramenta multifuncional em Bash que permita a gestão eficiente de u
 - Alguns dos comandos precisa da PowerShell em modo Administrativo (Opção 2 & 7 do Menu)
 
 ## Autores
-
 João Félix <br />
 João Gouveia
+
+## Bibliografia
+### Aqui estão listados os anexos dos sites utilizados durante a criação deste projeto. 
+Para os comandos PowerShell, recorreu-se à ajuda do ChatGPT, pois são notoriamente complexos e difíceis.<br />
+O uso da PowerShell justificou-se pela necessidade de privilégios administrativos e pela sua superioridade em comparação ao Bash, que, sejamos sinceros, é uma linguagem fraquíssima e bastante limitada.<br />
+Aliás, praticamente qualquer um consegue dominar os comandos Linux sem esforço logo não vão ser colocados nesta bibliografia (Maior parte da pesquisa em linux foi efetuada no Man, e não no google) <br />
+O único comando que exigiu pesquisa foi o awk, que, convenhamos, é um pouco menos trivial.<br />
+Todos os outros comandos Linux são tão simples que até uma criança poderia executá-los sem pensar duas vezes. 😊<br />
+
+### Windows
+
+### Linux
+https://guialinux.uniriotec.br/awk/ <br />
+
+### MacOS
+
+### Outros Comandos
