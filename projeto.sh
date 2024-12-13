@@ -22,7 +22,6 @@ check_processes() {
 monitor_disk_usage() {
     echo "Diga qual o disco que quer ler"
     read disco
-
 df -h | grep "^$disk"
 }
 
