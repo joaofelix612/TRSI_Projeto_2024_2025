@@ -38,7 +38,7 @@ https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/ <br />
 ### MacOS
 https://macpaw.com/how-to/delete-files-and-folders-on-mac <br />
 https://www.kandji.io/blog/mac-logging-and-the-log-command-a-guide-for-apple-admins <br />
-https://stackoverflow.com/questions/47934081/ do-the-systemctl-and-service-commands-exist-only-on-linux-and-not-on-mac <br />
+https://stackoverflow.com/questions/47934081/do-the-systemctl-and-service-commands-exist-only-on-linux-and-not-on-mac <br />
 
 ### Outros Comandos
 https://www.shellscriptx.com/2016/11/criando-menu-textual.html <br />
