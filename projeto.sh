@@ -38,7 +38,7 @@ monitor_disk_usage() {
 }
 
 check_services() {
-    echo "Digite o nome do serviço (por exemplo mysql):"
+    echo "Digite o nome do serviço (Por exemplo BTAGService):"
     read servico
     if [[ $(uname) == "Linux" ]]; then
         systemctl status $servico
@@ -95,7 +95,7 @@ backup_files() {
     fi
 
     data=$(date +"%d%b%Y")
-    backup_nome="${ficheiro%.*}_$data_backup.${ficheiro##*.}"
+    backup_nome="${ficheiro%.*}_$data.${ficheiro##*.}"
 
     cp "$ficheiro" "$backup_nome"
     echo "Backup criado com sucesso: $backup_nome"

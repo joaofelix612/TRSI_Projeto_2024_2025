@@ -7,7 +7,7 @@ Objetivo Geral:
 Criar uma ferramenta multifuncional em Bash que permita a gestão eficiente de um sistema Windows, como também linux embora limitade por algumas syntax, através de um menu interativo. A ferramenta facilitará a execução de tarefas administrativas comuns de forma automatizada e acessível.
 
 ## Tecnologias e Pré-requisitos
-- Bash versão mais recente
+- Bash versão 'GNU bash, versão 5.2.37(1)-release (x86_64-pc-msys)' ou a versão mais recente do Bash.
 - Sistema operacional: Linux ou Windows com compatibilidade limitada de MacOS
 - Um dos comandos precisa da PowerShell em modo Administrativo (Opção 7 do Menu)
 
