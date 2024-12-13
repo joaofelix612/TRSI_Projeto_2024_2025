@@ -19,7 +19,7 @@ João Gouveia
 ### Aqui estão listados os anexos dos sites utilizados durante a criação deste projeto. 
 Para os comandos PowerShell, recorreu-se à ajuda do ChatGPT, pois são extremamente complexos, longos e difíceis.<br />
 O uso da PowerShell justificou-se pela necessidade de privilégios administrativos e pela sua superioridade em comparação ao Bash, que, sejamos sinceros, é uma linguagem fraquíssima e bastante limitada.<br />
-Aliás, praticamente qualquer um consegue dominar os comandos Linux sem esforço logo não vão ser colocados nesta bibliografia (Maior parte da pesquisa em linux foi efetuada no Man, e não no google) <br />
+Os comandos Linux não vão estar nesta bibliografia já que são faceis, aliás, praticamente qualquer um consegue dominar os comandos Linux sem esforço (Maior parte da pesquisa em linux foi efetuada no Man, e não no google) <br />
 O único comando que exigiu pesquisa foi o awk e o sed, porque, bem, é um comando que realmente exige algum esforço para ser dominado.<br />
 Todos os outros comandos Linux são muito simples 😊<br />
 
