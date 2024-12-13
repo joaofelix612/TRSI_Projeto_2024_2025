@@ -8,7 +8,7 @@ Criar uma ferramenta multifuncional em Bash que permita a gestão eficiente de u
 
 ## Tecnologias e Pré-requisitos
 - Bash versão mais recente
-- Sistema operacional: Linux ou Windows com compatibilidade limitade de MacOS
+- Sistema operacional: Linux ou Windows com compatibilidade limitada de MacOS
 - Um dos comandos precisa da PowerShell em modo Administrativo (Opção 7 do Menu)
 
 ### Autores
