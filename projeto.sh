@@ -1,5 +1,17 @@
 #!/bin/bash
 
+if uname -r >/dev/null 2>&1; then
+    if grep -q Microsoft /proc/version 2>/dev/null; then
+        echo "Isto é um sistema Windows a correr um ambiente Linux (WSL)."
+    elif [ -n "$WINDIR" ] || [ -n "$OS" ] && [ "$OS" == "Windows_NT" ]; then
+        echo "Isto é um sistema baseado em Windows a correr Bash."
+    else
+        echo "Isto é um sistema baseado em Linux."
+    fi
+else
+    echo "Não sabemos qual é o sistema operativo usado."
+fi
+
 show_menu() {
     echo "Escolha uma opção:"
     echo "1) Backup de ficheiros"
@@ -20,59 +32,112 @@ check_processes() {
 }
 
 monitor_disk_usage() {
-    echo "Diga qual o disco que quer ler"
+    echo "Diga qual o disco que quer ler:"
     read disco
-df -h | grep "^$disk"
+    df -h | grep "^$disco"
 }
 
 check_services() {
-    echo "Digite o nome do serviço (por exemplo mysql)"
-	read servico
-	sc.exe query $servico
+    echo "Digite o nome do serviço (por exemplo mysql):"
+    read servico
+    if [[ $(uname) == "Linux" ]]; then
+        systemctl status $servico
+    elif [[ $(uname) == "Darwin" ]]; then
+        echo "MacOS não tem o systemctl. Utilize outro método."
+    else
+        sc.exe query $servico
+    fi
 }
 
 monitor_cpu_memory() {
-cpuLoad=$(wmic cpu get loadpercentage /format:value | grep -oP '\d+')
-freeMemoryKB=$(wmic OS get freephysicalmemory /format:value | sed 's/FreePhysicalMemory=//' | tr -d '[:space:]')
-if [[ -n "$freeMemoryKB" && "$freeMemoryKB" =~ ^[0-9]+$ ]]; then
-    freeMemoryMB=$((freeMemoryKB / 1024)) 
-    freeMemoryGB=$((freeMemoryMB / 1024)) 
-    remainderMB=$((freeMemoryKB % 1024))
-    freeMemoryGB=$(printf "%.2f" "$((freeMemoryGB))$decimalGB")
-else
-    freeMemoryGB="0.00"
-fi
-echo "CPU Load: $cpuLoad%"
-echo "Free Memory: $freeMemoryGB GB"
+    if [[ $(uname) == "Linux" ]]; then
+        cpuLoad=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}')
+        freeMemory=$(free -m | awk '/Mem:/ {print $4}')
+        echo "CPU Load: $cpuLoad%"
+        echo "Free Memory: $freeMemory MB"
+    else
+        cpuLoad=$(wmic cpu get loadpercentage /format:value | grep -oP '\d+')
+        freeMemoryKB=$(wmic OS get freephysicalmemory /format:value | sed 's/FreePhysicalMemory=//' | tr -d '[:space:]')
+        freeMemoryMB=$((freeMemoryKB / 1024))
+        freeMemoryGB=$((freeMemoryMB / 1024))
+        echo "CPU Load: $cpuLoad%"
+        echo "Free Memory: $freeMemoryGB GB"
+    fi
 }
 
 update_system() {
-    echo "Atenção! este comando só funciona em sistemas Ubuntu, caso entenda clique no Enter."
-	read enter
-	apt update | apt upgrade -y
+    if [[ $(uname) == "Linux" ]]; then
+        echo "Atenção! este comando só funciona em sistemas baseados em Debian (como Ubuntu)."
+        read -p "Pressione Enter para continuar ou CTRL+C para cancelar..."
+        sudo apt update && sudo apt upgrade -y
+    elif [[ $(uname) == "Darwin" ]]; then
+        echo "Em MacOS, use 'brew update' para atualizar pacotes."
+    else
+        echo "Em sistemas Windows, não há comando de atualização de pacotes."
+    fi
 }
 
 manage_users() {
-    net user
+    if [[ $(uname) == "Linux" ]]; then
+        sudo getent passwd
+    else
+        net user
+    fi
 }
 
 backup_files() {
-echo "Por favor insira o nome do ficheiro para backup (Exemplo: ficheiro.txt) (Precisa de estar na mesma diretoria que o bash):"
-read ficheiro
+    echo "Por favor insira o nome do ficheiro para backup (Exemplo: ficheiro.txt):"
+    read ficheiro
 
-if [[ ! -f "$ficheiro" ]]; then
-    echo "O ficheiro '$ficheiro' não existe."
-    exit 1
-fi
+    if [[ ! -f "$ficheiro" ]]; then
+        echo "O ficheiro '$ficheiro' não existe."
+        exit 1
+    fi
 
-data=$(date +"%d%b%Y")
+    data=$(date +"%d%b%Y")
+    backup_nome="${ficheiro%.*}_$data_backup.${ficheiro##*.}"
 
-backup_nome="${ficheiro%.*}_$data_backup.${ficheiro##*.}"
-
-cp "$ficheiro" "$backup_nome"
-
-echo "Backup criado com sucesso: $backup_nome"
+    cp "$ficheiro" "$backup_nome"
+    echo "Backup criado com sucesso: $backup_nome"
 }
+
+clear_temp_files() {
+    if [[ $(uname) == "Linux" ]]; then
+        echo "A limpar arquivos temporários em Linux..."
+        sudo rm -rf /tmp/*
+    elif [[ $(uname) == "Darwin" ]]; then
+        echo "A limpar arquivos temporários em macOS..."
+        rm -rf /private/var/folders/*/*
+    else
+        echo "A limpar arquivos temporários em Windows..."
+        del /q /f /s %temp%\*
+    fi
+}
+
+check_security_log() {
+    if [[ $(uname) == "Linux" ]]; then
+        echo "A verificar os logs de segurança em Linux..."
+        sudo cat /var/log/auth.log | tail -n 20 
+    elif [[ $(uname) == "Darwin" ]]; then
+        echo "A verificar os logs de segurança em macOS (pode ocorrer erros)..."
+        sudo log show --predicate 'eventMessage contains "security"' --last 1d  
+    else
+
+    echo "A verificar os logs de segurança em Windows..."
+
+       powershell -Command "
+        Start-Process powershell -Verb runAs -ArgumentList {
+            \$outputFile = [System.IO.Path]::Combine(\$env:USERPROFILE, 'Documents', 'SecurityLogs.txt')
+            if (-not (Test-Path -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\EnableLUA')) {
+                \$logs = Get-WinEvent -LogName Security | Select-Object -First 20 | Format-List TimeCreated, Message
+                # Salva os logs no arquivo
+                \$logs | Out-File -FilePath \$outputFile -Force
+            }
+        }"
+    fi
+    echo "Ficheiro guardado na pasta de documentos"
+}
+
 
 exit_program() {
     echo "A sair do script..."
@@ -90,48 +155,16 @@ while true; do
     show_menu
     read -p "Digite o número da opção: " option
     case $option in
-        1) 
-            backup_files
-            ask_continue
-            ;;
-        2) 
-            clear_temp_files
-            ask_continue
-            ;;
-        3) 
-            monitor_disk_usage
-            ask_continue
-            ;;
-        4) 
-            check_services
-            ask_continue
-            ;;
-        5) 
-            update_system
-            ask_continue
-            ;;
-        6) 
-            monitor_cpu_memory
-            ask_continue
-            ;;
-        7) 
-            check_security_logs
-            ask_continue
-            ;;
-        8) 
-            manage_users
-            ask_continue
-            ;;
-        9) 
-            check_processes
-            ask_continue
-            ;;
-        10) 
-            exit_program 
-            ;;
-        *) 
-            echo "Opção inválida!"
-            ask_continue
-            ;;
+        1) backup_files; ask_continue ;;
+        2) clear_temp_files; ask_continue ;;
+        3) monitor_disk_usage; ask_continue ;;
+        4) check_services; ask_continue ;;
+        5) update_system; ask_continue ;;
+        6) monitor_cpu_memory; ask_continue ;;
+        7) check_security_log; ask_continue ;;
+        8) manage_users; ask_continue ;;
+        9) check_processes; ask_continue ;;
+        10) exit_program ;;
+        *) echo "Opção inválida!"; ask_continue ;;
     esac
 done
