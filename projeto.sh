@@ -118,7 +118,7 @@ check_security_log() {
         sudo cat /var/log/auth.log | tail -n 20 
     elif [[ $(uname) == "Darwin" ]]; then
         echo "A verificar os logs de segurança em macOS (pode ocorrer erros)..."
-        sudo log show --predicate 'eventMessage contains "security"' --last 1d  
+        sudo log show --last 1d  
     else
 
     echo "A verificar os logs de segurança em Windows..."
