@@ -14,6 +14,7 @@ Cada imagem representa uma etapa do processo de teste, desde a execução das op
 ### Opção 1 no Menu
 ![alt text](Imagens-PNGs/menuopcao1.png)
 ![alt text](Imagens-PNGs/opcao1resultado.png)
+
 ### Opção 2 no Menu
 
 
