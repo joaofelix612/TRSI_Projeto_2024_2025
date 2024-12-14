@@ -1,6 +1,8 @@
 # TRSI_Projeto_2024_2025
 Repositório para o projeto da disciplina de Tecnologias de Scripting e Automação
 
+![alt text](image.png)
+
 ## Ideia Geral do Projeto
 ### Nome do Projeto: Ferramenta de Gestão e Monitorização do Sistema (FGMS)
 Objetivo Geral:
@@ -43,7 +45,7 @@ https://macpaw.com/how-to/delete-files-and-folders-on-mac <br />
 https://www.kandji.io/blog/mac-logging-and-the-log-command-a-guide-for-apple-admins <br />
 https://stackoverflow.com/questions/47934081/do-the-systemctl-and-service-commands-exist-only-on-linux-and-not-on-mac <br />
 
-### Outros Comandos
+### Outros Comandos & e Links
 https://www.shellscriptx.com/2016/11/criando-menu-textual.html <br />
 https://stackoverflow.com/questions/73082720/uname-on-windows-terminal <br />
 https://learn.microsoft.com/pt-br/windows/wsl/basic-commands <br />
@@ -54,3 +56,4 @@ https://tldp.org/LDP/abs/html/string-manipulation.html <br />
 https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion <br />
 https://www.shellhacks.com/bash-colors/ <br />
 https://stackoverflow.com/questions/39414267/syntax-for-echo-command-ansi-color-styling-in-bash <br />
+https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method <br />
