@@ -4,23 +4,26 @@ Repositório para o projeto da disciplina de Tecnologias de Scripting e Automaç
 ## Ideia geral do projeto
 ### Nome do projeto: Ferramenta de Gestão e Monitorização do Sistema (FGMS)
 Objetivo Geral:
-Criar uma ferramenta multifuncional em Bash que permita a gestão eficiente de um sistema Windows, como também linux embora limitade por algumas syntax, através de um menu interativo. A ferramenta facilitará a execução de tarefas administrativas comuns de forma automatizada e acessível.
+Criar uma ferramenta multifuncional em Bash que permita a gestão eficiente de um sistema Windows, linux, como também MacOS, embora que seja limitado por algumas syntax, através de um menu interativo. A ferramenta facilitará a execução de tarefas administrativas comuns de forma automatizada e acessível.
 
 ### Tecnologias e Pré-requisitos
-- Bash versão 'GNU bash, versão 5.2.37(1)-release (x86_64-pc-msys)' ou a versão mais recente do Bash.
-- Sistema operacional: Linux ou Windows com compatibilidade limitada de MacOS
+- Bash versão `GNU bash, versão 5.2.37(1)-release (x86_64-pc-msys)` ou a versão mais recente do Bash.
 - Alguns dos comandos precisa da PowerShell em modo Administrativo (Opção 2 & 7 do Menu)
+#### Sistemas Operacionais Compatíveis:
+- Linux (funcionalidade completa).
+- Windows (necessário PowerShell com privilégios administrativos para algumas funções).
+- MacOS (funcionalidade limitada devido à compatibilidade da syntax).
 
 ## Autores
 João Félix <br />
 João Gouveia
 
-## Bibliografia
+## Referências e Bibliografia
 ### Aqui estão listados os anexos dos sites utilizados durante a criação deste projeto. 
-Para os comandos PowerShell, recorreu-se à ajuda do ChatGPT, pois são extremamente complexos, longos e difíceis.<br />
-O uso da PowerShell justificou-se pela necessidade de privilégios administrativos e pela sua superioridade em comparação ao Bash, que, sejamos sinceros, é uma linguagem fraquíssima e bastante limitada.<br />
-Os comandos Linux não vão estar nesta bibliografia já que são faceis, aliás, praticamente qualquer um consegue dominar os comandos Linux sem esforço (Maior parte da pesquisa em linux foi efetuada no Man, e não no google) <br />
-O único comando que exigiu pesquisa foi o awk e o sed, porque, bem, é um comando que realmente exige algum esforço para ser dominado.<br />
+Para os comandos PowerShell, recorreu-se à ajuda do ChatGPT, devido à sua complexidade e elevado grau de dificuldade.<br />  
+A escolha da PowerShell justificou-se pela necessidade de privilégios administrativos e pela sua superioridade em comparação ao Bash, que, sejamos sinceros, é uma linguagem limitada e muito fraca.<br />  
+Os comandos Linux não estão incluídos nesta bibliografia, pois a maioria é simples e pode ser facilmente dominada por praticamente qualquer pessoa. (A maior parte da pesquisa em Linux foi efetuada na documentação oficial *Man*, e não no google).<br />  
+Os únicos comandos que exigiram mais esforço e pesquisa foram o `awk` e o `sed`, porque, convenhamos, são ferramentas que realmente requerem maior dedicação para serem dominadas.<br />  
 Todos os outros comandos Linux são muito simples 😊<br />
 
 ### Comandos Windows Usados
@@ -47,3 +50,6 @@ https://learn.microsoft.com/pt-br/windows/wsl/basic-commands <br />
 https://www.banjocode.com/post/wsl/see-if-wsl-bash <br />
 https://gist.github.com/gmolveau/d0e3efc219c5bcc6ecc13a1405ac6c73 <br />
 https://github.com/microsoft/WSL/issues/844 <br />
+https://tldp.org/LDP/abs/html/string-manipulation.html <br />
+https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion <br />
+https://www.shellhacks.com/bash-colors/ <br />

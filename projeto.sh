@@ -2,14 +2,14 @@
 
 if uname -r >/dev/null 2>&1; then
     if grep -q Microsoft /proc/version 2>/dev/null; then
-        echo "Isto é um sistema Windows a correr um ambiente Linux (WSL)."
+        echo -e "\033[1;34m Isto é um sistema Windows a correr um ambiente Linux (WSL).\033[0m"
     elif [ -n "$WINDIR" ] || [ -n "$OS" ] && [ "$OS" == "Windows_NT" ]; then
-        echo "Isto é um sistema baseado em Windows a correr Bash."
+        echo -e "\033[1;33m Isto é um sistema baseado em Windows a correr Bash.\033[0m"
     else
-        echo "Isto é um sistema baseado em Linux."
+        echo -e "\033[1;32m Isto é um sistema baseado em Linux.\033[0m"
     fi
 else
-    echo "Não sabemos qual é o sistema operativo usado."
+    echo -e "\033[1;31m Não sabemos qual é o sistema operativo usado.\033[0m"
 fi
 
 show_menu() {
