@@ -12,7 +12,7 @@ Criar uma ferramenta multifuncional em Bash que permita a gestão eficiente de u
 #### Sistemas Operacionais Compatíveis:
 - Linux (funcionalidade completa).
 - Windows (necessário PowerShell com privilégios administrativos para algumas funções).
-- MacOS (funcionalidade limitada devido à compatibilidade da syntax).
+- MacOS (funcionalidade limitada devido a questões de compatibilidade com a syntax. Como nenhum de nós possui um computador com MacOS, não foi possível testar a funcionalidade para verificar se ela realmente funciona).
 
 ## Autores
 João Félix <br />
