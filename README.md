@@ -53,3 +53,4 @@ https://github.com/microsoft/WSL/issues/844 <br />
 https://tldp.org/LDP/abs/html/string-manipulation.html <br />
 https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion <br />
 https://www.shellhacks.com/bash-colors/ <br />
+https://stackoverflow.com/questions/39414267/syntax-for-echo-command-ansi-color-styling-in-bash <br />
