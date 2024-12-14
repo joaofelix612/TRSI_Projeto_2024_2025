@@ -12,9 +12,27 @@ Cada imagem representa uma etapa do processo de teste, desde a execução das op
 ![alt text](Imagens-PNGs/Sistemalinuxdetetado.png)
 
 ### Opção 1 no Menu
-
-
+![alt text](Imagens-PNGs/menuopcao1.png)
+![alt text](Imagens-PNGs/opcao1resultado.png)
 ### Opção 2 no Menu
 
 
 ### Opção 3 no Menu
+
+
+### Opção 4 no Menu
+
+
+### Opção 5 no Menu
+
+
+### Opção 6 no Menu
+
+
+### Opção 7 no Menu
+
+
+### Opção 8 no Menu
+
+
+### Opção 9 no Menu
