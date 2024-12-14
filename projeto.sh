@@ -6,7 +6,7 @@ if uname -r >/dev/null 2>&1; then
     elif [ -n "$WINDIR" ] || [ -n "$OS" ] && [ "$OS" == "Windows_NT" ]; then
         echo -e "\033[1;33m Isto é um sistema baseado em Windows a correr Bash.\033[0m"
     else
-        echo -e "\033[1;32m Isto é um sistema baseado em Linux.\033[0m"
+        echo -e "\033[38;5;214m Isto é um sistema baseado em Linux.\033[0m"
     fi
 else
     echo -e "\033[1;31m Não sabemos qual é o sistema operativo usado.\033[0m"
