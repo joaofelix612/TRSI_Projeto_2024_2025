@@ -1,7 +1,7 @@
 # TRSI_Projeto_2024_2025
 Repositório para o projeto da disciplina de Tecnologias de Scripting e Automação
 
-![alt text](Imagens-PNGs/image-removegb-preview.png)
+![alt text](Imagens-PNGs/image-removebg-preview.png)
 
 ## Ideia Geral do Projeto
 ### Nome do Projeto: Ferramenta de Gestão e Monitorização do Sistema (FGMS)
