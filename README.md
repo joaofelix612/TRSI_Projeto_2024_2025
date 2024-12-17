@@ -21,7 +21,7 @@ João Félix <br />
 João Gouveia
 
 ## Teste do Código em Ambiente Linux
-TesteEmAmbienteLinux.md
+[TesteEmAmbienteLinux.md](https://github.com/joaofelix612/TRSI_Projeto_2024_2025/blob/main/TesteEmAmbienteLinux.md)
 
 ## Referências e Bibliografia
 ### Aqui estão listados os anexos dos sites utilizados durante a criação deste projeto. 
@@ -32,31 +32,31 @@ Os únicos comandos que exigiram mais esforço e pesquisa foram o `awk` e o `sed
 Todos os outros comandos Linux são muito simples 😊<br />
 
 ### Comandos Windows Usados
-https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sc-query <br />
-https://stackoverflow.com/questions/24503084/wmic-cpu-get-loadpercentage-always-returns-empty-value <br />
-https://stackoverflow.com/questions/29249830/how-can-i-get-total-physical-memory-using-windows-cmd <br />
-https://www.lifewire.com/net-user-command-2618097 <br />
+* https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sc-query <br />
+* https://stackoverflow.com/questions/24503084/wmic-cpu-get-loadpercentage-always-returns-empty-value <br />
+* https://stackoverflow.com/questions/29249830/how-can-i-get-total-physical-memory-using-windows-cmd <br />
+* https://www.lifewire.com/net-user-command-2618097 <br />
 
 
 ### Comandos Linux Usados
-https://guialinux.uniriotec.br/awk/ <br />
-https://stackoverflow.com/questions/49884905/bash-complex-examples-of-sed-command <br />
-https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/ <br />
+* https://guialinux.uniriotec.br/awk/ <br />
+* https://stackoverflow.com/questions/49884905/bash-complex-examples-of-sed-command <br />
+* https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/ <br />
 
 ### Comandos MacOS Usados
-https://macpaw.com/how-to/delete-files-and-folders-on-mac <br />
-https://www.kandji.io/blog/mac-logging-and-the-log-command-a-guide-for-apple-admins <br />
-https://stackoverflow.com/questions/47934081/do-the-systemctl-and-service-commands-exist-only-on-linux-and-not-on-mac <br />
+* https://macpaw.com/how-to/delete-files-and-folders-on-mac <br />
+* https://www.kandji.io/blog/mac-logging-and-the-log-command-a-guide-for-apple-admins <br />
+* https://stackoverflow.com/questions/47934081/do-the-systemctl-and-service-commands-exist-only-on-linux-and-not-on-mac <br />
 
 ### Outros Comandos & Links
-https://www.shellscriptx.com/2016/11/criando-menu-textual.html <br />
-https://stackoverflow.com/questions/73082720/uname-on-windows-terminal <br />
-https://learn.microsoft.com/pt-br/windows/wsl/basic-commands <br />
-https://www.banjocode.com/post/wsl/see-if-wsl-bash <br />
-https://gist.github.com/gmolveau/d0e3efc219c5bcc6ecc13a1405ac6c73 <br />
-https://github.com/microsoft/WSL/issues/844 <br />
-https://tldp.org/LDP/abs/html/string-manipulation.html <br />
-https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion <br />
-https://www.shellhacks.com/bash-colors/ <br />
-https://stackoverflow.com/questions/39414267/syntax-for-echo-command-ansi-color-styling-in-bash <br />
-https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method <br />
+* https://www.shellscriptx.com/2016/11/criando-menu-textual.html <br />
+* https://stackoverflow.com/questions/73082720/uname-on-windows-terminal <br />
+* https://learn.microsoft.com/pt-br/windows/wsl/basic-commands <br />
+* https://www.banjocode.com/post/wsl/see-if-wsl-bash <br />
+* https://gist.github.com/gmolveau/d0e3efc219c5bcc6ecc13a1405ac6c73 <br />
+* https://github.com/microsoft/WSL/issues/844 <br />
+* https://tldp.org/LDP/abs/html/string-manipulation.html <br />
+* https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion <br />
+* https://www.shellhacks.com/bash-colors/ <br />
+* https://stackoverflow.com/questions/39414267/syntax-for-echo-command-ansi-color-styling-in-bash <br />
+* https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method <br />
