@@ -20,6 +20,9 @@ Criar uma ferramenta multifuncional em Bash que permita a gestão eficiente de u
 João Félix <br />
 João Gouveia
 
+## Teste do Código em Ambiente Linux
+TesteEmAmbienteLinux.md
+
 ## Referências e Bibliografia
 ### Aqui estão listados os anexos dos sites utilizados durante a criação deste projeto. 
 Para os comandos PowerShell, recorreu-se à ajuda do ChatGPT, devido à sua complexidade e elevado grau de dificuldade.<br />  
