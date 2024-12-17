@@ -16,24 +16,25 @@ Cada imagem representa uma etapa do processo de teste, desde a execução das op
 ![alt text](Imagens-PNGs/opcao1resultado.png)
 
 ### Opção 2 no Menu
-
+![alt text](Imagens-PNGs\menuopcao2.png)
 
 ### Opção 3 no Menu
-
+![alt text](Imagens-PNGs\menuopcao3.png)
 
 ### Opção 4 no Menu
-
+![alt text](Imagens-PNGs\menuopcao4.png)
 
 ### Opção 5 no Menu
-
-
+![alt text](Imagens-PNGs\menuopcao5parte1.png)
+![alt text](Imagens-PNGs\menuopcao5parte2.png)
 ### Opção 6 no Menu
-
+![alt text](Imagens-PNGs\menuopcao6.png)
 
 ### Opção 7 no Menu
-
+![alt text](Imagens-PNGs\menuopcao7.png)
 
 ### Opção 8 no Menu
-
+![alt text](Imagens-PNGs\menuopcao8.png)
 
 ### Opção 9 no Menu
+![alt text](Imagens-PNGs\menuopcao9.png)
