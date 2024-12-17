@@ -60,3 +60,4 @@ Todos os outros comandos Linux são muito simples 😊<br />
 * https://www.shellhacks.com/bash-colors/ <br />
 * https://stackoverflow.com/questions/39414267/syntax-for-echo-command-ansi-color-styling-in-bash <br />
 * https://cloudinary.com/guides/web-performance/4-ways-to-add-images-to-github-readme-1-bonus-method <br />
+* https://github.com/Lin-jun-xiang/awesome-vscode-extensions/blob/main/README.md (Ajudou na Estética)<br />
