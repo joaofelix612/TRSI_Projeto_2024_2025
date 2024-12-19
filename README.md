@@ -18,9 +18,9 @@ Criar uma ferramenta multifuncional em Bash que permita a gestão eficiente de u
 
 ## Autores
 
-![João Félix](https://img.shields.io/badge/Autor-João%20Félix-yellow)  
+![João Félix - 230001131](https://img.shields.io/badge/Autor-João%20Félix-yellow)  
 
-![João Gouveia](https://img.shields.io/badge/Autor-João%20Gouveia-red)
+![João Gouveia - 230000962](https://img.shields.io/badge/Autor-João%20Gouveia-red)
 
 
 ## Teste do Código em Ambiente Linux
