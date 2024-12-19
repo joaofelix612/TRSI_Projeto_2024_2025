@@ -17,8 +17,13 @@ Criar uma ferramenta multifuncional em Bash que permita a gestão eficiente de u
 - MacOS (funcionalidade limitada devido a questões de compatibilidade com a syntax. Como nenhum de nós possui um computador com MacOS, não foi possível testar a funcionalidade para verificar se ela realmente funciona).
 
 ## Autores
-João Félix <br />
-João Gouveia
+
+![João Félix](https://img.shields.io/badge/Author-João%20Félix-yellow)  
+- João Félix  
+
+![João Gouveia](https://img.shields.io/badge/Author-João%20Gouveia-red)  
+- João Gouveia
+
 
 ## Teste do Código em Ambiente Linux
 [TesteEmAmbienteLinux.md](https://github.com/joaofelix612/TRSI_Projeto_2024_2025/blob/main/TesteEmAmbienteLinux.md)
